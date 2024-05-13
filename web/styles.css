@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #db34bf; /* Ana renk  */
+  --secondary-color: #2ecc71; /* İkincil renk  */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; 
+  padding: 0; 
+  display: flex; /* Öğelerin yan yana hizalanmasını sağlar */
+  justify-content: center; /* Öğeleri yatay eksende merkezler */
+  align-items: center; /* Öğeleri dikey eksende merkezler */
+  height: 100vh; /* Sayfa yüksekliği tam ekran yüksekliği yapılır */
+  background: linear-gradient(35deg, var(--primary-color), var(--secondary-color)); 
+}
+
+.container {
+  max-width: 400px; 
+  margin: 50px auto; /* İçerik konteyneri dikey eksende 50 piksel boşluk ile otomatik olarak hizalanır */
+  background-color: #fff; 
+  padding: 50px; /* Konteyner iç içe boşluğu belirlenir */
+  border-radius: 8px; /* Kenar yuvarlanma yarıçapı belirlenir */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+  text-align: center; /* Başlık metni ortalanır */
+  color: var(--primary-color); 
+}
+
+input[type="text"] {
+  width: 60%; /* Metin giriş alanının genişliği belirlenir */
+  padding: 10px; 
+  margin-bottom: 20px; /* Metin giriş alanının alt boşluğu belirlenir */
+}
+
+button {
+  padding: 10px ; 
+  background-color: var(--primary-color); 
+  color: #fff; 
+  border: none; /* Kenar çizgisi kaldırılır */
+  cursor: pointer; /* Fare üzerine gelindiğinde işaretçi değiştirilir */
+  transition: 300ms all; /* Geçiş efekti belirlenir */
+}
+
+button:hover {
+  background-color: var(--secondary-color); /* Fare üzerine gelindiğinde düğme arka plan rengi değişir */
+}
+
+ul {
+  list-style-type: none; /* Liste öğelerinin nokta stilini kaldırır */
+  padding: 0; /* Liste iç içe boşluğu sıfırlanır */
+}
+
+li {
+  display: flex; 
+  align-items: center; 
+  position: relative; /* Liste öğeleri için göreli konum belirlenir */
+  padding: 10px; 
+  border-bottom: 1px solid #ddd; /* Liste öğeleri arasına alt kenar çizgisi eklenir */
+}
+
+.completed span {
+  text-decoration: line-through; /* Tamamlanan görevler için metin üstü çizgisi eklenir */
+  color: #aaa; 
+}
+
+span {
+  flex: 1; /* Metin alanının esnek boyutu belirlenir */
+  white-space: nowrap; /* Metnin taşmasını engeller */
+  overflow: hidden; /* Metnin taşmasını engeller */
+  margin-right: 10px; 
+  text-overflow: ellipsis; /* Metin alanı taşarsa üç nokta (...) görünür */
+}
+
+.completed button {
+  color: blue; /* Tamamlanan görevlerin düğme metin rengi belirlenir */
+}

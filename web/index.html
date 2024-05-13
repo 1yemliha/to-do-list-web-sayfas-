@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>To-Do List</title> 
+<link rel="stylesheet" href="styles.css"> <!-- Stil dosyasını bağlar -->
+</head>
+<body>
+
+<div class="container"> 
+  <h1>To-Do List</h1> 
+  <input type="text" id="taskInput" placeholder="Add new task..."> <!-- Görev girişi için metin kutusu -->
+  <button onclick="addTask()">Add Task</button> <!-- Görev ekleme butonu, tıklanınca "addTask" fonksiyonunu çağırır -->
+  <div> 
+    <button onclick="showAllTasks()">All Tasks</button> <!-- Tüm görevleri göster butonu -->
+    <button onclick="showCompletedTasks()">Completed Tasks</button> <!-- Tamamlanan görevleri göster butonu -->
+    <button onclick="showIncompleteTasks()">Incomplete Tasks</button> <!-- Tamamlanmamış görevleri göster butonu -->
+  </div>
+  <ul id="taskList"> <!-- Görevlerin listelendiği liste -->
+  </ul>
+</div>
+
+<script src="script.js"></script> <!-- JavaScript dosyasını bağlar -->
+</body>
+</html>
